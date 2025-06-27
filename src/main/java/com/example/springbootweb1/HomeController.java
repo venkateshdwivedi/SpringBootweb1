@@ -3,6 +3,7 @@ package com.example.springbootweb1;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
@@ -13,20 +14,24 @@ public class HomeController {
     @RequestMapping("/")
     public String home(){
         System.out.println("home method called");
-        return "index.jsp";
+        return "index";
     }
 
     @RequestMapping("add")
-    public String add(int num1,int num2, Model model){
+    public ModelAndView add(int num1,int num2, ModelAndView mv){
         // int num1= Integer.parseInt(req.getParameter("num1"));
         // int num2= Integer.parseInt(req.getParameter("num2"));
 
         int result=num1+num2;
 
-        // session.setAttribute("result", result); //data between pages is handled by session object
+        // session.setAttribute("result", result); //data between pages is handled by session object in servlet way and handled by model in spring way
 
-        model.addAttribute("result", result);
+        // model.addAttribute("result", result);
+
+        //using modelandview object 
+        mv.addObject("result", result);
+        mv.setViewName("result");
         
-        return "result.jsp";
+        return mv;
     }
 }

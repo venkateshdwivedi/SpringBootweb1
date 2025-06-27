@@ -8,7 +8,8 @@
         <!-- <h2>Result is: <%=  session.getAttribute("result") %></h2> -->
 
         <!-- This is using JSTL -->
-        <h2>Result is: ${result} </h2> 
+        <h2>Welcome to Alien world </h2> 
+        <p> ${alien} <p> 
 
         
 

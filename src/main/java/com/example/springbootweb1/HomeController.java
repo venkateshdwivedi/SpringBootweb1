@@ -28,8 +28,23 @@ public class HomeController {
 
         // model.addAttribute("result", result);
 
-        //using modelandview object 
+        //using modelandview object
         mv.addObject("result", result);
+        mv.setViewName("result");
+        
+        return mv;
+    }
+
+    
+    @RequestMapping("addAlien")
+    public ModelAndView addAlien(int aid,String aName, ModelAndView mv){
+       
+        Alien obj=new Alien();
+        obj.setAid(aid);
+        obj.setaName(aName);
+
+        //using modelandview object
+        mv.addObject("alien", obj);
         mv.setViewName("result");
         
         return mv;

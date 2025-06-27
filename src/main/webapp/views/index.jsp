@@ -5,14 +5,14 @@
         <link rel="stylesheet" type="text/css" href="style.css">
 </head>
     <body>
-        <h2>Basic Calculator</h2>
+        <h2>Add Alien</h2>
 
 
-         <form action="add">
-                <label for="num1">Enter 1st Number :</label>
-                <input type="text" id="num1" name="num1"><br>
-                <label for="num2">Enter 2nd Number :</label>
-                <input type="text" id="num2" name="num2"><br>
+         <form action="addAlien">
+                <label for="aid">Enter Alien id :</label>
+                <input type="text" id="aid" name="aid"><br>
+                <label for="aName">Enter Alien Name :</label>
+                <input type="text" id="aName" name="aName"><br>
                 <input type="submit" value="Submit">
             </form>
     </body>

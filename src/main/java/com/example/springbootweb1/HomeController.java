@@ -2,6 +2,7 @@ package com.example.springbootweb1;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -37,16 +38,17 @@ public class HomeController {
 
     
     @RequestMapping("addAlien")
-    public ModelAndView addAlien(int aid,String aName, ModelAndView mv){
+    public String addAlien(@ModelAttribute Alien alien){
        
-        Alien obj=new Alien();
-        obj.setAid(aid);
-        obj.setaName(aName);
+        // Alien obj=new Alien();
+        // obj.setAid(aid);
+        // obj.setaName(aName);
 
-        //using modelandview object
-        mv.addObject("alien", obj);
-        mv.setViewName("result");
+        // //using modelandview object
+        // mv.addObject("alien", obj);
+        // mv.setViewName("result");
         
-        return mv;
+        //optimisation done using modelattribute
+        return "result";
     }
 }

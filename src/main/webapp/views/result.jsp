@@ -9,7 +9,8 @@
 
         <!-- This is using JSTL -->
         <h2>Welcome to Alien world </h2> 
-        <p> ${alien} <p> 
+        <p> ${alien} </p> 
+        <p> Welcome to ${course} course</p>
 
         
 

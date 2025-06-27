@@ -12,6 +12,12 @@ import jakarta.servlet.http.HttpSession;
 @Controller
 public class HomeController {
 
+
+    @ModelAttribute("course")
+    public String coursename(){
+        return "Java";
+    }
+
     @RequestMapping("/")
     public String home(){
         System.out.println("home method called");
@@ -38,7 +44,7 @@ public class HomeController {
 
     
     @RequestMapping("addAlien")
-    public String addAlien(@ModelAttribute Alien alien){
+    public String addAlien(Alien alien){
        
         // Alien obj=new Alien();
         // obj.setAid(aid);
